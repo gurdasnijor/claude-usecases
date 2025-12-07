@@ -172,7 +172,7 @@ For each intelligence type found, extract according to the schema:
   "funder_name": "string",
   "program_name": "string or null",
   "program_officer": "string or null",
-  "funder_type": "Foundation|Impact Investor|Government Program|Corporate Partnership|Philanthropic Family Office|Multi-lateral Org|Other",
+  "funder_type": "Foundation|Impact Investor|Government Program|Corporate Partnership|Philanthropic Family Office|Multilateral Org|Other",
 
   // Opportunity details
   "funding_amount_range": "<$50K|$50K-$250K|$250K-$1M|$1M-$5M|>$5M|Unclear",
@@ -366,14 +366,16 @@ Assign confidence levels based on information quality:
 Identify and document connections between entities:
 
 ```json
-"cross_references": [
-  {
-    "type": "partnership_to_funder|stakeholder_to_partnership|etc",
-    "from": "Entity 1",
-    "to": "Entity 2",
-    "relationship": "Description of connection"
-  }
-]
+{
+  "cross_references": [
+    {
+      "type": "partnership_to_funder|stakeholder_to_partnership|etc",
+      "from": "Entity 1",
+      "to": "Entity 2",
+      "relationship": "Description of connection"
+    }
+  ]
+}
 ```
 
 **Common cross-references:**
