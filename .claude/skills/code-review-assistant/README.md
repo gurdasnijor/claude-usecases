@@ -89,9 +89,9 @@ Reviews are structured as:
 - A05: Security Misconfiguration
 - A06: Vulnerable Components
 - A07: Authentication Failures
-- A08: Data Integrity Failures
-- A09: Logging Failures
-- A10: SSRF
+- A08: Software and Data Integrity Failures
+- A09: Security Logging and Monitoring Failures
+- A10: Server-Side Request Forgery (SSRF)
 
 ## Quick Review Mode
 

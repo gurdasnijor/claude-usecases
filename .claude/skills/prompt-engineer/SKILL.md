@@ -218,7 +218,7 @@ Analyze this data and tell me what you find.
 ```
 
 After:
-```
+~~~
 Analyze this dataset and return findings as:
 
 ```json
@@ -229,6 +229,7 @@ Analyze this dataset and return findings as:
   "confidence": "high|medium|low"
 }
 ```
+~~~
 
 **Technique 4: Role Definition**
 

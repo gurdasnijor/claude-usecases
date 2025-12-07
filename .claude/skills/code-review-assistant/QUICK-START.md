@@ -19,20 +19,20 @@ It's a [description] for [use case].
 
 | Level | Icon | Action |
 |-------|------|--------|
-| Critical | STOP | Fix immediately |
-| High | Fix before merge |
-| Medium | Fix soon |
-| Low | Nice to have |
+| Critical | :no_entry: | Fix immediately |
+| High | :warning: | Fix before merge |
+| Medium | :wrench: | Fix soon |
+| Low | :eyes: | Nice to have |
 
 ---
 
 ## Security Checklist (OWASP Top 10)
 
-- [ ] **Injection** - Parameterized queries? Input sanitized?
-- [ ] **Broken Auth** - Password hashing? Session management?
-- [ ] **Data Exposure** - Secrets hardcoded? Encryption?
-- [ ] **Access Control** - Authorization checks?
-- [ ] **Misconfiguration** - Debug mode? Default creds?
+- [ ] **A01: Broken Access Control** - Authorization checks? IDOR?
+- [ ] **A02: Cryptographic Failures** - Secrets hardcoded? Encryption?
+- [ ] **A03: Injection** - Parameterized queries? Input sanitized?
+- [ ] **A05: Security Misconfiguration** - Debug mode? Default creds?
+- [ ] **A07: Authentication Failures** - Password hashing? Session management?
 
 ---
 
@@ -83,7 +83,7 @@ element.innerHTML = userInput;  // BAD
 eval(userCode);  // BAD
 
 // Prototype pollution
-Object.assign({}, userObject);  // RISKY
+Object.assign(targetObject, userObject);  // RISKY
 ```
 
 ---
