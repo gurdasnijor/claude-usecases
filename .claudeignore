@@ -67,6 +67,16 @@ build/
 *.egg-info/
 
 # =============================================================================
+# PACKAGE LOCK FILES
+# =============================================================================
+# Lock files pin dependency versions but don't aid code understanding
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+poetry.lock
+Pipfile.lock
+
+# =============================================================================
 # IDE & EDITOR
 # =============================================================================
 .vscode/
