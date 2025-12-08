@@ -1,0 +1,108 @@
+# Claude Project Context Optimization
+# This file specifies patterns to exclude when uploading to Claude Projects
+# to reduce token usage and improve context efficiency.
+#
+# Last updated: 2025-12-08
+# Estimated savings: ~600-800 KB (~15,000-20,000 tokens)
+
+# =============================================================================
+# GIT & VERSION CONTROL
+# =============================================================================
+# Git history has zero reasoning value for LLM context
+.git/
+.gitattributes
+
+# =============================================================================
+# BACKUP & TEMPORARY FILES
+# =============================================================================
+# Stale backup copies - redundant with current versions
+*.backup
+*.bak
+*.tmp
+*~
+*.swp
+*.swo
+
+# =============================================================================
+# HISTORICAL DOCUMENTATION
+# =============================================================================
+# PR descriptions are historical records with no operational value
+docs/pr-descriptions/
+docs/summaries/
+.pr-description.md
+
+# =============================================================================
+# INTEGRATION CONFIGS (Machine-Readable)
+# =============================================================================
+# Make.com blueprints are JSON configs for external automation
+# They're machine-readable and don't aid LLM reasoning
+relationship-intelligence/make-blueprint*.json
+
+# =============================================================================
+# TEST INFRASTRUCTURE
+# =============================================================================
+# Tests are essential for development but not for understanding/modifying code
+# Include these when you need Claude to write or fix tests
+tests/
+htmlcov/
+coverage/
+*.coverage
+.pytest_cache/
+.vitest/
+coverage.xml
+coverage_output.txt
+
+# =============================================================================
+# BUILD ARTIFACTS & DEPENDENCIES
+# =============================================================================
+# These should never be committed, but exclude just in case
+__pycache__/
+*.py[cod]
+*$py.class
+node_modules/
+.next/
+out/
+dist/
+build/
+*.egg-info/
+
+# =============================================================================
+# IDE & EDITOR
+# =============================================================================
+.vscode/
+.idea/
+*.sublime-*
+.DS_Store
+
+# =============================================================================
+# LOGS & TEMPORARY
+# =============================================================================
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =============================================================================
+# ENVIRONMENT & SECRETS
+# =============================================================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# =============================================================================
+# OPTIONAL EXCLUSIONS
+# =============================================================================
+# Uncomment these if you want further token savings and don't need
+# Claude to work with these specific areas:
+
+# Large HTML templates (if not modifying templates)
+# templates/impact-reports/
+
+# SQL schemas (if not modifying database structure)
+# *.sql
+
+# Relationship intelligence module (if not working on Make.com integration)
+# relationship-intelligence/
