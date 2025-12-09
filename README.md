@@ -1,5 +1,8 @@
 # Claude Use Cases & Skills
 
+[![Run in Smithery](https://smithery.ai/badge/skills/therealchandlerbing)](https://smithery.ai/skills?ns=therealchandlerbing&utm_source=github&utm_medium=badge)
+
+
 **Comprehensive AI skill library for specialized workflows** | 20+ Managed Skills | 15 Categories | Production-Ready
 
 ![status](https://img.shields.io/badge/status-production--ready-brightgreen)
